@@ -1,0 +1,25 @@
+{
+  "name": "roahkim",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "predev": "node src/utils/renameFiles.js",
+    "dev": "next dev src",
+    "prebuild": "node src/utils/renameFiles.js",
+    "build": "next build src",
+    "start": "next start src",
+    "deploy": "next build src && touch src/out/.nojekyll && gh-pages -d src/out -b main",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.2.4",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
+    "gh-pages": "^6.1.1",
+    "image-size": "^1.1.1"
+  }
+}
