@@ -1,13 +1,70 @@
+@import 'uikit.min.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Marcellus&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Marcellus&family=Permanent+Marker&family=Questrial&display=swap');
+@import url('https://www.apple.com/wss/fonts?family=SF+Pro+Icons&amp;v=1');
+
+html,
 body {
-  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
 }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
+header {
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-nav li {
-  display: inline;
-  margin-right: 10px;
+main {
+  flex: 1;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background: #fff;
+}
+
+.uk-offcanvas-bar {
+  background: #fff;
+}
+
+.uk-offcanvas-bar h3 {
+  color: #111;
+}
+.uk-navbar-dropdown-nav > li > a {
+  color: #333;
+}
+
+.uk-offcanvas-overlay::before {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.uk-offcanvas-bar .uk-close {
+  color: #111;
+}
+.uk-offcanvas-close {
+  top: 14px;
+  right: 24px;
+}
+
+.uk-subnav > .uk-active > a {
+  position: relative;
+  font-weight: normal;
+}
+.uk-subnav > .uk-active > a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust the position of the underline */
+  width: 100%;
+  height: 1px; /* Thickness of the underline */
+  background-color: orange; /* Color of the underline */
 }
