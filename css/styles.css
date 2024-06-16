@@ -1,46 +1,50 @@
-@import 'uikit.min.css';
-
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Marcellus&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&family=Questrial&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&family=Questrial&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Marcellus&family=Permanent+Marker&family=Questrial&display=swap');
-@import url('https://www.apple.com/wss/fonts?family=SF+Pro+Icons&amp;v=1');
-
-html,
-body {
-  height: 100%;
-  margin: 0;
+@font-face {
+  font-family: 'Questrial', sans-serif;
+  src: url('../fonts/Questrial-Regular.ttf');
 }
-body {
+
+:root {
+  --primary-text-color: #111;
+  --background-color: #fff;
+  --font-size-xlarge: 24px;
+  --font-size-large: 20px;
+  --font-size-normal: 16px;
+  --font-size-small: 14px;
+}
+.container {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 header {
-  min-height: 50px;
+  min-height: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 main {
-  flex: 1;
+  flex-grow: 1;
+}
+
+p::first-letter {
+  text-transform: uppercase;
 }
 
 .uk-navbar-container:not(.uk-navbar-transparent) {
-  background: #fff;
+  background: var(--background-color);
 }
 
 .uk-offcanvas-bar {
-  background: #fff;
+  background: var(--background-color);
 }
 
 .uk-offcanvas-bar h3 {
-  color: #111;
+  color: var(--primary-text-color);
 }
 .uk-navbar-dropdown-nav > li > a {
-  color: #333;
+  color: var(--primary-text-color);
 }
 
 .uk-offcanvas-overlay::before {
@@ -48,23 +52,47 @@ main {
 }
 
 .uk-offcanvas-bar .uk-close {
-  color: #111;
+  color: var(--primary-text-color);
 }
 .uk-offcanvas-close {
-  top: 14px;
+  top: 24px;
   right: 24px;
 }
 
 .uk-subnav > .uk-active > a {
   position: relative;
-  font-weight: normal;
 }
+
 .uk-subnav > .uk-active > a::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -2px; /* Adjust the position of the underline */
+  bottom: -2px;
   width: 100%;
-  height: 1px; /* Thickness of the underline */
-  background-color: orange; /* Color of the underline */
+  height: 1px;
+  background-color: orange;
+}
+
+.logo {
+  font-family: 'Questrial', sans-serif;
+  font-size: var(--font-size-xlarge);
+  color: var(--primary-text-color);
+  margin-bottom: 0;
+}
+
+.text-xlarge {
+  font-size: var(--font-size-xlarge);
+}
+.text-large {
+  font-size: var(--font-size-large);
+}
+.text-normal {
+  font-size: var(--font-size-normal);
+}
+.text-small {
+  font-size: var(--font-size-small);
+}
+.title {
+  font-size: var(--font-size-large);
+  margin-block: 20px 40px;
 }
